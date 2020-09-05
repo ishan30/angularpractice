@@ -1,0 +1,15 @@
+<!-- <p>user works!</p> -->
+<div *ngIf='userName'>
+    <p>One way Binding Using Interpolation</p>
+    <label>Username : </label> <span>{{userName | uppercase}}</span>
+</div>
+<!-- {{Interpolation}} -> one-way binding label -->
+<!-- [ngModel] -> one way binding -->
+<!-- [(ngModel)] -> Two way binding  -->
+<p>Two way Binding Using ngModel</p>
+<label>Username : </label> 
+<input [(ngModel)]="userName" placeholder="name"/>
+
+<div *ngIf='userName'>
+<app-userdetail [name]="userName"></app-userdetail>
+</div>
